@@ -685,6 +685,8 @@
 
 								& > span {
 									margin-right: 4px;
+									display: inline-block;
+									transform: scale(-1,1);
 								} 
 							}
 						}
