@@ -1,4 +1,4 @@
-@import url('../icomoon/style.css');
+@import "../icomoon/style";
 
 html {
 	box-sizing: border-box;
@@ -55,8 +55,8 @@ a {
 	overflow: hidden;
 
 	&_shadow {
-		width: 35%;
-		min-width: 360px;
+		width: 31%;
+		min-width: 350px;
 		background: linear-gradient(90deg, #fff, #000, #fff);
 		height: 9px;
 		display: inline-block;
@@ -73,8 +73,8 @@ a {
 	padding:12px 28px 8px;
 	border-radius: 25px;
 	box-shadow: 0px 3px 0px 1px #d0d0d0;
-	min-width: 280px;
-	width: 22%;
+	min-width: 265px;
+	width: 20%;
 
 	& > img {
 		width: 100%;
@@ -151,4 +151,9 @@ a {
 		transform: translate(-50%, -50%);
 		height: 80%;
 	}
+}
+
+.text-size {
+	font-size: calc(16px + 9 * (100vw / 1260));
+	line-height: 40.87px;
 }
