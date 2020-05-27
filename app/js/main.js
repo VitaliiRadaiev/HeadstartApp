@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){  
 
 	$('.header_slider').slick({
 		infinite: true,
@@ -126,6 +126,7 @@ $(function(){
 	}
 
 	function whatsHotFullScreen(imgSrc, title, text) {
+		let arraySrc = imgSrc.split(',');
 		let body = document.body;
 		let div = document.createElement('div');
 		div.className = 'whatsHot-fullScreen';
@@ -133,8 +134,8 @@ $(function(){
 			<div class="whatsHot-fullScreen_wrap">
 			  <div class="whatsHot-fullScreen_box">
 			    <div class="whatsHot-fullScreen_box_close" data-button="closeWhatshotFullScreen"></div>
-			    <div class="whatsHot-fullScreen_box_image">
-			      <img src="${imgSrc}">
+			    <div class="whatsHot-fullScreen_box_slider">
+			    		
 			    </div>
 			    <div class="whatsHot-fullScreen_box_text-content">
 			      <div class="whatsHot-fullScreen_box_title">
@@ -150,7 +151,24 @@ $(function(){
 			</div>
 		`;
 
-		body.append(div);
+		body.prepend(div);
+
+		let slider = document.querySelector('.whatsHot-fullScreen_box_slider');
+
+		arraySrc.forEach(url => {
+			let div = document.createElement('div');
+			div.className = 'whatsHot-fullScreen_box_slider_item';
+			div.innerHTML = `<img src="${url.trim()}">`
+
+			slider.append(div);
+		})
+
+		$('.whatsHot-fullScreen_box_slider').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+		});
 	}
 
 	function modalVideo(url) {

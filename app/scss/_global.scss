@@ -190,16 +190,39 @@ a {
 		padding: 4.9% 2.7% 7.8% 4.5%;
 		box-shadow: 0px 0px 8px -3px black;
 		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
 
-		&_image {
+		&_slider {
 			width: 58%;
 			height: 100%;
+			display: flex;
+			min-width: 0;
 
-			& > img {
+			& .slick-track {
+				display: flex;
+			}
+
+			& .slick-slide {
+				height: auto;
+
+				& > div {
+					height: 100%;
+				}
+			}
+
+			&_item {
 				border-radius: 10px;
 				height: 100%;
 				width: 100%;
-				object-fit: cover;
+				& > img {
+					border-radius: 10px;
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
 			}
 		}
 
