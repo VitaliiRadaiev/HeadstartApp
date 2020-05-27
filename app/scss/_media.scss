@@ -110,7 +110,10 @@
 		line-height: 26.87px;
 	}
 
-
+	.whatsHot-fullScreen_box_text>p {
+		font-size: calc(16px + 4 * (100vw / 1260));
+		line-height: 26.87px;
+	}
 	//-- WhatsHot --
 		.whatsHot {
 			&_slider {
@@ -344,6 +347,37 @@
 			width: 80%;
 
 			height: 70%;
+		}
+	}
+
+	.whatsHot-fullScreen {
+
+
+
+		&_box {
+			flex-wrap: wrap;
+			padding: 4.9%;
+
+			&_image {
+				width: 100%;
+				padding-top: 35px;
+
+			}
+
+			&_text-content {
+				width: 100%;
+				padding-left: 0px;
+				text-align: center;
+				margin-top: 4%;
+			}
+
+			&_title {
+
+			}
+
+			&_text {
+				
+			}
 		}
 	}
 }

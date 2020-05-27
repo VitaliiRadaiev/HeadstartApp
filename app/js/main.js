@@ -106,12 +106,51 @@ $(function(){
 	});
 
 
-	let el = document.querySelector('.videos_slider');
+	let videoSlider = document.querySelector('.videos_slider');
 
-	el.onclick = (event) => {
-		if(event.target.dataset.youtubeurl) {
+	videoSlider.onclick = (event) => {
+		if(event.target.dataset.youtubeurl) { 
 			modalVideo(event.target.dataset.youtubeurl);
 		}
+	}
+
+	let whatsHotSlider = document.querySelector('.whatsHot_slider');
+
+	whatsHotSlider.onclick = (event) => {
+		if(event.target.dataset.showpopup) {
+			let imgSrc = event.target.dataset.imgsrc;
+			let title = event.target.dataset.title;
+			let fullText = event.target.dataset.fulltext;
+			whatsHotFullScreen(imgSrc, title, fullText);
+		}
+	}
+
+	function whatsHotFullScreen(imgSrc, title, text) {
+		let body = document.body;
+		let div = document.createElement('div');
+		div.className = 'whatsHot-fullScreen';
+		div.innerHTML = `
+			<div class="whatsHot-fullScreen_wrap">
+			  <div class="whatsHot-fullScreen_box">
+			    <div class="whatsHot-fullScreen_box_close" data-button="closeWhatshotFullScreen"></div>
+			    <div class="whatsHot-fullScreen_box_image">
+			      <img src="${imgSrc}">
+			    </div>
+			    <div class="whatsHot-fullScreen_box_text-content">
+			      <div class="whatsHot-fullScreen_box_title">
+			        <h3>${title}</h3>
+			      </div>
+			      <div class="whatsHot-fullScreen_box_text">
+			        <p>
+			        	${text}
+			        </p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		`;
+
+		body.append(div);
 	}
 
 	function modalVideo(url) {
@@ -135,8 +174,8 @@ $(function(){
 
 	document.body.onclick = (event) => {
 		if(event.target.dataset.button == 'close') {
-			let el = document.querySelector('.modal-video');
-			el.remove();
+			let modalVideo = document.querySelector('.modal-video');
+			modalVideo.remove();
 		} else if(event.target.dataset.button == 'fullScreen') {
 			let modal = document.querySelector('.modal-video');
 			if(!modal.fullScreenBool) {
@@ -149,6 +188,9 @@ $(function(){
 				modal.fullScreenBool = false;
 				modal.style.backgroundColor = 'rgba(30,30,30,0.87)';
 			}
+		} else if(event.target.dataset.button == 'closeWhatshotFullScreen') {
+			let whatsHotFullScreen = document.querySelector('.whatsHot-fullScreen');
+			whatsHotFullScreen.remove();
 		}
 	}
 	
