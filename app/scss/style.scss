@@ -351,7 +351,7 @@
 					right: 0;
 					text-align: center;
 
-					& > a {
+					& > span {
 						color: #f2d68f;
 						text-decoration: none;
 						font-size: calc(16px + 6 * (100vw / 1260));
@@ -487,7 +487,7 @@
 					left: 18px;
 					right: 0;
 
-					& > a {
+					& > span {
 						color: #eda6b5;
 						text-decoration: none;
 						font-size: calc(16px + 6 * (100vw / 1260));
