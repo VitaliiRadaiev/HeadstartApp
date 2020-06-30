@@ -389,7 +389,7 @@
 	}
 }
 
-@media (max-width: 768px)  {
+@media (max-width: 767px)  {
 	//-- Header --
 		.header {
 			&_banner {
@@ -430,6 +430,7 @@
 	//-- Resoftables --
 		.resoftables {
 			padding-bottom: 81px;
+			background-size: cover;
 
 			&_video {
 				height: 380px;
@@ -461,6 +462,7 @@
 		.videos {
 			padding-top: 80px;
 			padding-bottom: 81px;
+			background-size: cover;
 		}
 	//-- //Videos --
 
@@ -472,6 +474,29 @@
 					& .social_slider_card {
 						& > figure {
 							height: 240px;
+						}
+					}
+				}
+			}
+
+			& .slick-slide {
+				& > div {
+					flex: 0 1;
+				}
+				& > div:last-child {
+					& .social_slider_item_left {
+
+						& > figure {
+							order: 0;
+						}
+
+						& .social_slider_item_text-wrap {
+							padding-left: 6%;
+						}
+
+						& .social_slider_item_text_icons {
+							left: 12%;
+							right: 2%;
 						}
 					}
 				}

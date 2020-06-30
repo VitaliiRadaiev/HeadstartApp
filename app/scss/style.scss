@@ -565,7 +565,7 @@
 			& > h4 {
 				margin: 0;
 			}
-			& span {
+			& a {
 				text-shadow: none;
 				width: 33px;
 				height: 33px;
@@ -579,7 +579,7 @@
 				box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.18);
 				transition: all .2s;
 				margin-left: 11px;
-				font-size: 24px;
+				font-size: 21px;
 			}
 
 			& a {
@@ -611,10 +611,46 @@
 				right: -36px;
 			}
 
+			& .slick-track {
+				display: flex;
+			}
+
+			& .slick-slide {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+
+				& > div {
+					height: auto;
+					flex: 1 0;
+				}
+
+				& > div:last-child {
+					& .social_slider_item_left {
+
+						& > figure {
+							order: 1;
+						}
+
+						& .social_slider_item_text-wrap {
+							padding-right: 6%;
+							padding-left: 2px;
+						}
+
+						& .social_slider_item_text_icons {
+							left: 2%;
+							right: 12%;
+						}
+					}
+				}
+			}
+
 			&_item {
 				padding: 2%;
+				height: 100%;
 
 				& .social_slider_card {
+					height: 100%;
 					position: relative;
 				    padding: 15px;
 				    background: #fff;
@@ -649,19 +685,6 @@
 					& .social_slider_item_text_icons {
 						left: 12%;
 						right: 2%;
-					}
-				}
-
-				&_right {
-					margin-top: 4%;
-					& .social_slider_item_text-wrap {
-						padding-right: 6%;
-						padding-left: 2px;
-					}
-
-					& .social_slider_item_text_icons {
-						left: 2%;
-						right: 12%;
 					}
 				}
 

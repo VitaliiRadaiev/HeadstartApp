@@ -12,7 +12,7 @@ $(document).ready(function(){
 		speed: 500,
 		responsive: [
 		  {
-		    breakpoint: 769,
+		    breakpoint: 768,
 		    settings: {
 		      slidesToShow: 5,
 		      slidesToScroll: 1,
@@ -92,14 +92,23 @@ $(document).ready(function(){
 		slidesToShow: 2,
 		slidesToScroll: 1,
 		arrows: true,
+		rows: 2,
 		prevArrow: '<div class="slick-prev slick-arrow" aria-label="Previous" style=""><span class="icon-caret-left"></span></div>',
 		nextArrow:'<div class="slick-next slick-arrow" aria-label="Next" style=""><span class="icon-caret-right"></span></div>',
 		responsive: [
 		  {
-		    breakpoint: 1025,
+		    breakpoint: 1060,
 		    settings: {
 		      slidesToShow: 1,
 		      slidesToScroll: 1,
+		    }
+		  },
+		  {
+		    breakpoint: 768,
+		    settings: {
+		    	slidesToShow: 1,
+		    	slidesToScroll: 1,	
+		      rows:1,
 		    }
 		  },
 		  ]
