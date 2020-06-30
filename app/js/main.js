@@ -1,34 +1,5 @@
 $(document).ready(function(){  
 
-	$('.header_slider').slick({
-		infinite: true,
-		slidesToShow: 8,
-		slidesToScroll: 1,
-		arrows: false,
-		prevArrow: '<div class="slick-prev slick-arrow" aria-label="Previous" style=""><span class="icon-caret-left"></span></div>',
-		nextArrow:'<div class="slick-next slick-arrow" aria-label="Next" style=""><span class="icon-caret-right"></span></div>',
-		autoplay: true,
-		autoplaySpeed: 5000,
-		speed: 500,
-		responsive: [
-		  {
-		    breakpoint: 768,
-		    settings: {
-		      slidesToShow: 5,
-		      slidesToScroll: 1,
-		      arrows: true,
-		    }
-		  },
-		  {
-		    breakpoint: 577,
-		    settings: {
-		      slidesToShow: 3,
-		      slidesToScroll: 1,
-		      arrows: true,
-		    }
-		  },
-		]
-	});
 
 	$('.whatsHot_slider').slick({
 		infinite: true,

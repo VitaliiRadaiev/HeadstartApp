@@ -14,8 +14,11 @@
 			width: 80%;
 			margin: 10px auto;
 			display: flex;
+			justify-content: space-between;
+			align-items: center;
 			&_item {
-				width: 50% !important;
+				padding: 0 15px;
+				max-width: 120px;
 				outline: none;
 				transition: all .3s;
 
@@ -156,8 +159,6 @@
 				}
 
 				&_item {
-					display: flex;
-					justify-content: center;
 					padding: 10px 15px;
 
 					& > img {
