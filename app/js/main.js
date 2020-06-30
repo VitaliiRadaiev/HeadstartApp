@@ -104,11 +104,15 @@ $(document).ready(function(){
 		    }
 		  },
 		  {
-		    breakpoint: 768,
+		    breakpoint: 577,
 		    settings: {
 		    	slidesToShow: 1,
 		    	slidesToScroll: 1,	
-		      rows:1,
+		      	rows:1,
+		      	adaptiveHeight: true,
+		      	//autoplay: true,
+		      	autoplaySpeed: 5000,
+		      	speed: 500,
 		    }
 		  },
 		  ]
